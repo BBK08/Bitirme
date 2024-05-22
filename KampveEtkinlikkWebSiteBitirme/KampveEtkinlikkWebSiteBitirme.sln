@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33130.400
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KampveEtkinlikkWebSiteBitirme", "KampveEtkinlikkWebSiteBitirme\KampveEtkinlikkWebSiteBitirme.csproj", "{EDF27EF8-073F-45C6-978A-2206F61A1201}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDF27EF8-073F-45C6-978A-2206F61A1201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF27EF8-073F-45C6-978A-2206F61A1201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF27EF8-073F-45C6-978A-2206F61A1201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF27EF8-073F-45C6-978A-2206F61A1201}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06BD0A41-C0FF-497A-B735-09D91A38B2F9}
+	EndGlobalSection
+EndGlobal

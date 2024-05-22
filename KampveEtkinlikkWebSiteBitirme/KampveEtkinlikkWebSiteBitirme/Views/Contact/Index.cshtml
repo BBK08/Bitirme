@@ -1,0 +1,158 @@
+﻿<!--using KampveEtkinlikkWebSiteBitirme.Models.Entity
+model List<İletisim>
+{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CampVitrin.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>-->
+<!-- header -->
+<!-- //header -->
+<!-- banner -->
+<!-- //banner -->
+<!-- Contact -->
+<!--foreach (var x in Model)
+{
+<section class="contact py-5">
+    <div class="container py-lg-5 py-sm-3">
+        <h2 class="heading text-capitalize text-center mb-sm-5 mb-4">x.IletisimYazi</h2>
+        <ul class="list-unstyled row text-center mt-lg-5 mt-4 px-lg-5">
+            <li class="col-md-4 col-sm-6 adress-w3pvt-info">
+                <div class=" adress-icon">
+                    <span class="fa fa-map-marker"></span>
+                </div>
+
+                <h6>Adres</h6>
+                <p>
+                    Şirket Adı
+                    <br>Konya Seydişehir, Ahmet Cengiz Mühendislik Fakültesi, TR.
+                </p>
+            </li>
+
+            <li class="col-md-4 col-sm-6 adress-w3pvt-info mt-sm-0 mt-4">
+                <div class="adress-icon">
+                    <span class="fa fa-envelope-open-o"></span>
+                </div>
+                <h6>Telefon & Email</h6>
+                <p>x.Telefon</p>
+                <a href="x.Mail" class="mail">info@examplemail.com</a>
+            </li>
+            <li class="col-md-4 col-sm-6 adress-w3pvt-info mt-md-0 mt-4">
+
+                <div class="adress-icon">
+                    <span class="fa fa-comments-o"></span>
+                </div>
+
+                <h6>Bizi Takip Edin</h6>
+                <ul class="social_section_1info mt-2">
+                    <li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                    <li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li class="google"><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                    <li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                </ul>
+            </li>
+        </ul>
+
+        Html.Action("MesajGonder","Contact")
+
+
+    </div>
+</section>-->
+<!-- //Contact -->
+<!-- map -->
+<!--<div class="map p-2">
+    <iframe src="x.Koordinat"></iframe>
+</div>-->
+<!-- //map -->
+<!--footer -->
+<!--}-->
+<!-- //footer -->
+<!-- copyright -->
+<!-- //copyright -->
+<!-- move top -->
+<!--<div class="move-top text-right">
+    <a href="#home" class="move-top">
+        <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+    </a>
+</div>-->
+<!-- move top -->
+<!--</body>
+</html>-->
+
+
+
+
+
+
+
+
+
+@using KampveEtkinlikkWebSiteBitirme.Models.Entity
+@model List<İletisim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CampVitrin.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    @foreach (var x in Model)
+    {
+        <section class="contact py-5">
+            <div class="container py-lg-5 py-sm-3">
+                <h2 class="heading text-capitalize text-center mb-sm-5 mb-4">@x.IletisimYazi</h2>
+                <ul class="list-unstyled row text-center mt-lg-5 mt-4 px-lg-5">
+                    <li class="col-md-4 col-sm-6 adress-w3pvt-info">
+                        <div class="adress-icon">
+                            <span class="fa fa-map-marker"></span>
+                        </div>
+                        <h6>Adres</h6>
+                        <p>
+                            Şirket Adı
+                            <br>Konya Seydişehir, Ahmet Cengiz Mühendislik Fakültesi, TR.
+                        </p>
+                    </li>
+
+                    <li class="col-md-4 col-sm-6 adress-w3pvt-info mt-sm-0 mt-4">
+                        <div class="adress-icon">
+                            <span class="fa fa-envelope-open-o"></span>
+                        </div>
+                        <h6>Telefon & Email</h6>
+                        <p>@x.Telefon</p>
+                        <a href="mailto:@x.Mail" class="mail">info@examplemail.com</a>
+                    </li>
+                    <li class="col-md-4 col-sm-6 adress-w3pvt-info mt-md-0 mt-4">
+                        <div class="adress-icon">
+                            <span class="fa fa-comments-o"></span>
+                        </div>
+                        <h6>Bizi Takip Edin</h6>
+                        <ul class="social_section_1info mt-2">
+                            <li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li class="google"><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                            <li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                @Html.Action("MesajGonder", new tblMesaj())
+            </div>
+        </section>
+        <!-- //Contact -->
+        <div class="map p-2">
+            <iframe src="@x.Koordinat"></iframe>
+        </div>
+    }
+    <div class="move-top text-right">
+        <a href="#home" class="move-top">
+            <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+        </a>
+    </div>
+</body>
+</html>
+

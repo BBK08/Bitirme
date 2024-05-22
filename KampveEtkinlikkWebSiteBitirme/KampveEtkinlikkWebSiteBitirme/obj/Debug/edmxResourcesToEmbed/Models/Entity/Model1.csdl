@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBCampVeEventModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Hakkimda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Hakkimda1" Type="String" MaxLength="1150" FixedLength="false" Unicode="true" />
+    <Property Name="Hakkimda2" Type="String" MaxLength="1150" FixedLength="false" Unicode="true" />
+    <Property Name="Hakkimda3" Type="String" MaxLength="1150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DBCampVeEventEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Hakkimda" EntityType="Self.Hakkimda" />
+    <EntitySet Name="İletisim" EntityType="DBCampVeEventModel.İletisim" />
+    <EntitySet Name="YeniKayit" EntityType="DBCampVeEventModel.YeniKayit" />
+    <EntitySet Name="tblMisafir" EntityType="DBCampVeEventModel.tblMisafir" />
+    <EntitySet Name="tblRezervasyon" EntityType="DBCampVeEventModel.tblRezervasyon" />
+    <AssociationSet Name="FK_tblRezervasyon_tblMisafir" Association="DBCampVeEventModel.FK_tblRezervasyon_tblMisafir">
+      <End Role="tblMisafir" EntitySet="tblMisafir" />
+      <End Role="tblRezervasyon" EntitySet="tblRezervasyon" />
+    </AssociationSet>
+    <EntitySet Name="tblMesaj" EntityType="DBCampVeEventModel.tblMesaj" />
+  </EntityContainer>
+  <EntityType Name="İletisim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Açiklama" Type="String" MaxLength="1050" FixedLength="false" Unicode="true" />
+    <Property Name="Koordinat" Type="String" MaxLength="1050" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="230" FixedLength="false" Unicode="true" />
+    <Property Name="IletisimYazi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="YeniKayit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblMisafir">
+    <Key>
+      <PropertyRef Name="MisafirID" />
+    </Key>
+    <Property Name="MisafirID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="KimlikFoto1" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+    <Property Name="KimlikFoto2" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+    <Property Name="Ulke" Type="Int32" />
+    <Property Name="Sehir" Type="Int32" />
+    <Property Name="ilce" Type="Int32" />
+    <Property Name="Durum" Type="Int32" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblRezervasyon" Relationship="DBCampVeEventModel.FK_tblRezervasyon_tblMisafir" FromRole="tblMisafir" ToRole="tblRezervasyon" />
+  </EntityType>
+  <EntityType Name="tblRezervasyon">
+    <Key>
+      <PropertyRef Name="RezervasyonID" />
+    </Key>
+    <Property Name="RezervasyonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Misafir" Type="Int32" />
+    <Property Name="GirisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="CikisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Kisi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Oda" Type="Int32" />
+    <Property Name="Kisi1" Type="Int32" />
+    <Property Name="Kisi2" Type="Int32" />
+    <Property Name="Kisi3" Type="Int32" />
+    <Property Name="RezervasyonadSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Durum" Type="Int32" />
+    <NavigationProperty Name="tblMisafir" Relationship="DBCampVeEventModel.FK_tblRezervasyon_tblMisafir" FromRole="tblRezervasyon" ToRole="tblMisafir" />
+  </EntityType>
+  <Association Name="FK_tblRezervasyon_tblMisafir">
+    <End Type="DBCampVeEventModel.tblMisafir" Role="tblMisafir" Multiplicity="0..1" />
+    <End Type="DBCampVeEventModel.tblRezervasyon" Role="tblRezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMisafir">
+        <PropertyRef Name="MisafirID" />
+      </Principal>
+      <Dependent Role="tblRezervasyon">
+        <PropertyRef Name="Misafir" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblMesaj">
+    <Key>
+      <PropertyRef Name="MesajID" />
+    </Key>
+    <Property Name="MesajID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gonderen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Konu" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Mesaj" Type="String" MaxLength="1050" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

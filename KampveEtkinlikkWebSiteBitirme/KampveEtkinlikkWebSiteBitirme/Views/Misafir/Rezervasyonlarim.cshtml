@@ -1,0 +1,31 @@
+﻿@using KampveEtkinlikkWebSiteBitirme.Models.Entity
+@model List<tblRezervasyon>
+@{
+    ViewBag.Title = "Rezervasyonlarim";
+    Layout = "~/Views/Shared/_MisafirLayout.cshtml";
+}
+
+
+<br />
+<table class="table table-bordered">
+       <tr>
+           <th>Misafir İsim Soyisim</th>
+           <th>Giris Tarihi</th>
+           <th>Cikis Tarihi</th>
+           <th>Kisi Sayisi</th>
+           <th>Detay</th>
+       </tr>
+    @foreach(var item in Model)
+     {
+
+        <tr>
+            <td>@item.tblMisafir.AdSoyad</td>
+            <td>@item.GirisTarihi</td>
+            <td>@item.CikisTarihi</td>
+            <td>@item.Kisi</td>
+            <td><a href="#" class="btn btn-primary">Detaylar</a></td>
+        </tr>  
+
+     }
+       
+</table>

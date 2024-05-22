@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBCampVeEventModelStoreContainer" CdmEntityContainer="DBCampVeEventEntities">
+    <EntitySetMapping Name="Hakkimda">
+      <EntityTypeMapping TypeName="DBCampVeEventModel.Hakkimda">
+        <MappingFragment StoreEntitySet="Hakkimda">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Hakkimda1" ColumnName="Hakkimda1" />
+          <ScalarProperty Name="Hakkimda2" ColumnName="Hakkimda2" />
+          <ScalarProperty Name="Hakkimda3" ColumnName="Hakkimda3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="İletisim">
+      <EntityTypeMapping TypeName="DBCampVeEventModel.İletisim">
+        <MappingFragment StoreEntitySet="İletisim">
+          <ScalarProperty Name="IletisimYazi" ColumnName="IletisimYazi" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Koordinat" ColumnName="Koordinat" />
+          <ScalarProperty Name="Açiklama" ColumnName="Açiklama" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YeniKayit">
+      <EntityTypeMapping TypeName="DBCampVeEventModel.YeniKayit">
+        <MappingFragment StoreEntitySet="YeniKayit">
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMisafir">
+      <EntityTypeMapping TypeName="DBCampVeEventModel.tblMisafir">
+        <MappingFragment StoreEntitySet="tblMisafir">
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+          <ScalarProperty Name="Sehir" ColumnName="Sehir" />
+          <ScalarProperty Name="Ulke" ColumnName="Ulke" />
+          <ScalarProperty Name="KimlikFoto2" ColumnName="KimlikFoto2" />
+          <ScalarProperty Name="KimlikFoto1" ColumnName="KimlikFoto1" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="MisafirID" ColumnName="MisafirID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRezervasyon">
+      <EntityTypeMapping TypeName="DBCampVeEventModel.tblRezervasyon">
+        <MappingFragment StoreEntitySet="tblRezervasyon">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="RezervasyonadSoyad" ColumnName="RezervasyonadSoyad" />
+          <ScalarProperty Name="Kisi3" ColumnName="Kisi3" />
+          <ScalarProperty Name="Kisi2" ColumnName="Kisi2" />
+          <ScalarProperty Name="Kisi1" ColumnName="Kisi1" />
+          <ScalarProperty Name="Oda" ColumnName="Oda" />
+          <ScalarProperty Name="Kisi" ColumnName="Kisi" />
+          <ScalarProperty Name="CikisTarihi" ColumnName="CikisTarihi" />
+          <ScalarProperty Name="GirisTarihi" ColumnName="GirisTarihi" />
+          <ScalarProperty Name="Misafir" ColumnName="Misafir" />
+          <ScalarProperty Name="RezervasyonID" ColumnName="RezervasyonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMesaj">
+      <EntityTypeMapping TypeName="DBCampVeEventModel.tblMesaj">
+        <MappingFragment StoreEntitySet="tblMesaj">
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Gonderen" ColumnName="Gonderen" />
+          <ScalarProperty Name="MesajID" ColumnName="MesajID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

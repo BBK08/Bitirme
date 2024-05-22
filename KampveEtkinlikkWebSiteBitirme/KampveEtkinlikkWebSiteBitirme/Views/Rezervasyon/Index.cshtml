@@ -1,0 +1,130 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luxury Hotel Booking Widget Flat Responsive Widget Template :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="Error Page Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href="~/web/Rezervasyonyap/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/web/Rezervasyonyap/css/bootstrap.css" rel='stylesheet' type='text/css' media="all">
+    <script src="~/web/Rezervasyonyap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>BBK Kamp ve Etkinlik Rezervasyonu</h1>
+    </div>
+
+    <div class="banner-top">
+        <h2>HEMEN REZERVASYONUNU YAP!</h2>
+        <form method="post">
+            <div class="banner-bottom">
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Check In</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input class="date" id="datepicker" type="text" value="" onfocus="this.value = '';" name="GirisTarihi"  onblur="if (this.value == '') {this.value = '';}" required=>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Check Out</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input class="date" id="datepicker1" type="text" value="" onfocus="this.value = '';" name="CikisTarihi" onblur="if (this.value == '') {this.value = '';}" required=>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Yetişkinler</p>
+                    </div>
+                    <div class="bnr-right">
+                        <select>
+                            <option class="rm" value="volvo">0</option>
+                            <option class="rm" value="saab">1</option>
+                            <option class="rm" value="opel">2</option>
+                            <option class="rm" value="audi">3 ya da 3+</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Ad Soyad</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="text" name="RezervasyonAdSoyad" />
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Ad Soyad</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="text" name="RezervasyonAdSoyad" />
+
+                        <select>
+                            <option class="rm" value="volvo">0</option>
+                            <option class="rm" value="saab">1</option>
+                            <option class="rm" value="opel">2</option>
+                            <option class="rm" value="audi">3 or 3+</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Room</p>
+                    </div>
+                    <div class="bnr-right">
+                        <select>
+                            <option value="volvo">Select a type</option>
+                            <option value="saab">Tek Kişilik Çadır</option>
+                            <option value="opel">Çift Kişilik Çadırı</option>
+                            <option value="audi">3 Kişilik Çadır</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="bnr-btn">
+                    
+                        <input type="submit" value="Rezervasyon Yap">
+                    
+                </div>
+            </div>
+        </form>
+        <!---start-date-piker---->
+        <link rel="stylesheet" href="~/web/Rezervasyonyap/css/jquery-ui.css" />
+        <script src="~/web/Rezervasyonyap/js/jquery-ui.js"></script>
+        <script>
+				$(function() {
+				$( "#datepicker,#datepicker1" ).datepicker();
+				});
+        </script>
+        <!---/End-date-piker---->
+    </div>
+    <div class="footer">
+        <p>Copyright ©BBK. All Rights Reserved | Design by <a href="BBK" target="_blank">BBK</a></p>
+    </div>
+</body>
+</html>
